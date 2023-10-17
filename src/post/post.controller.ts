@@ -10,7 +10,9 @@ import {
 import { PostService } from './post.service';
 import { Post as PostModel } from '@prisma/client';
 import { PostDto } from './dto/post.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('post')
 @Controller('post')
 export class PostController {
   constructor(private readonly postService: PostService) {}
